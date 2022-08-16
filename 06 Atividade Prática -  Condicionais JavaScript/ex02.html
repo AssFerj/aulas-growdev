@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais JavaScript - Exercício 02</title>
+</head>
+<body>
+    <!--
+        Para o mesmo exercício acima insira mais uma variável 
+        a condicional, além de saber se o motorista tem 18 
+        anos ou mais, temos que saber também se ele é 
+        habilitado para dirigir. Caso ele tenha idade maior ou 
+        igual a 18 anos e possua habilitação, imprima no console 
+        “Pode dirigir” caso contrário imprima “Não pode dirigir”.
+    -->
+    <script>
+        const idadeMotorista = Number(prompt("Qual a idade do motorista?"))
+        const motoristaHabilitado = prompt("O motorista é habilitado? (Sim ou Não)")
+
+        if(idadeMotorista >= 18 && motoristaHabilitado == "Sim"){
+            console.log("Pode dirigir")
+        }else{
+            console.log("Não pode dirigir")
+        }
+    </script>
+</body>
+</html>

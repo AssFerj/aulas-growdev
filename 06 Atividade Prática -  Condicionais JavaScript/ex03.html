@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais JavaScript - Exercício 03</title>
+</head>
+<body>
+    <!--
+        Utilizando o IF, ELSE, ELSE IF crie uma estrutura para 
+        receber um número de 1 a 7 e imprimir no console o dia 
+        da Semana. Para este exercício assumimos que o dia 1 é 
+        Domingo, dia 2 é segunda e assim por diante. Caso o 
+        número recebido não esteja neste intervalo imprimir 
+        “Dia não reconhecido”.
+    -->
+    <script>
+        let n = Number(prompt("Digite um número de 1 a 7:"))
+        if(n == 1){
+            console.log("Domingo")
+        }else if(n == 2){
+            console.log("Segunda")
+        }else if(n == 3){
+            console.log("Terça")
+        }else if(n == 4){
+            console.log("Quarta")
+        }else if(n == 5){
+            console.log("Quinta")
+        }else if(n == 6){
+            console.log("Sexta")
+        }else if(n == 7){
+            console.log("Sábado")
+        }else{
+            console.log("Digite um número válido!")
+        }
+    </script>
+</body>
+</html>
