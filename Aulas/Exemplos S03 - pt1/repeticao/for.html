@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let numero = 0; numero <= 10; numero++) {
+          document.write(`O número é: ${numero}`);
+          document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        for (let numero2 = 10; numero2 >= 0; numero2--) {
+          document.write(`O número é: ${numero2}`);
+          document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        const frutas = ['uva', 'maçã', 'laranja', 'banana', 'abacaxi'];
+        let contLetras = 0;
+        for (let i = 0; i < frutas.length; i++) {
+            contLetras+=frutas[i].length;
+            document.write(`FRUTA -> ${frutas[i]} -> ${frutas[i].length }`);
+            document.write("<br>");
+        }
+        document.write(`O número total de letras é: ${contLetras}`);
+
+        // Funcionamento do length
+        // const nome = "Murilo"; // nome.length = 6
+        // const frutas2 = ['uva', 'maçã', 'laranja', 'banana', 'abacaxi']; // frutas2.length = 5
+    </script>
+</body>
+</html>

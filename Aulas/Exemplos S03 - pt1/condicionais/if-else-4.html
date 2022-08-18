@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function escolhaFruta() {
+            const fruta = prompt("Escolha uma fruta, suas opções são: \n [maçã, banana, laranja, uva]");
+    
+            document.write(`A opção escolhida foi ${fruta}`);
+            document.write('<br>');
+    
+            let qtdMaca = 10;
+            let qtdBanana = 5;
+            let qtdLaranja = 8;
+            let qtdUva = 12;
+    
+            if (fruta == 'maçã') {
+                qtdMaca--;
+                document.write(`A quantidade de Maçãs disponíveis é: ${qtdMaca}`);
+            } else if (fruta == 'banana') {
+                qtdBanana--;
+                document.write(`A quantidade de Bananas disponíveis é: ${qtdBanana}`);
+            } else if (fruta == 'laranja') {
+                qtdLaranja--;
+                document.write(`A quantidade de Laranjas disponíveis é: ${qtdLaranja}`);
+            } else if (fruta == 'uva') {
+                qtdUva--;
+                document.write(`A quantidade de Uvas disponíveis é: ${qtdUva}`);
+            } else {
+                alert("Opção inválida.");
+                escolhaFruta();
+            }
+        }
+
+        escolhaFruta();
+
+    </script>
+</body>
+</html>

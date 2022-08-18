@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 2</title>
+  </head>
+  <body>
+    <script>
+      let number = Number(prompt("Digite um numero: "));
+      let primo = `O número ${number} é primo`;
+      let noPrimo = `O número ${number} não é primo`;
+      let result = noPrimo;
+
+      for (i = 2; i < number; i++) {
+        result = primo;
+
+        if (number % i == 0) {
+          result = noPrimo;
+          break;
+        }
+      }
+
+      if (number == 2) {
+        result = primo;
+      }
+
+      console.log(result);
+    </script>
+  </body>
+</html>
+<!--Informe um valor a uma variável e imprima no console se o número
+é primo.-->

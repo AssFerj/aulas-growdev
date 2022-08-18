@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 3</title>
+  </head>
+  <body>
+    <script>
+      let altura = parseFloat(prompt("Digite sua altura: "));
+      let sexo = Number(
+        prompt(
+          "Digite o numero correspondente ao seu sexo:\n 1 Feminino \n 2 Masculino "
+        )
+      );
+      let homens = 72.7 * altura - 58;
+      let mulheres = 62.1 * altura - 44.7;
+
+      if (sexo == 1) {
+        console.log(`Seu peso ideal é ${mulheres.toFixed(2)}`);
+      } else if (sexo == 2) {
+        console.log(`Seu peso ideal é ${homens.toFixed(2)}`);
+      }
+    </script>
+  </body>
+</html>
+<!--Tendo como entrada a altura e o sexo (codificado da seguinte
+forma: 1 para sexo feminino e 2 para sexo masculino) de uma
+pessoa, construa um programa que calcule e imprima seu peso
+ideal, utilizando as seguintes fórmulas:
+- para homens: (72.7 * Altura) – 58
+- para mulheres: (62.1 * Altura) – 44.7
+
+Exemplo de dados:
+altura = 1.88
+sexo = 2-->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Utilizando o IF, ELSE, ELSE IF crie uma estrutura para receber um
+        // número de 1 a 7 e imprimir no console o dia da Semana. Para este
+        // exercício assumimos que o dia 1 é Domingo, dia 2 é segunda e assim
+        // por diante. Caso o número recebido não esteja neste intervalo
+        // imprimir “Dia não reconhecido”.
+        // Reescreva o exercício 3, utilizando apenas o SWITCH.
+
+        const dia = Number(prompt("Informe o dia da semana: \n [1] - Domingo \n [2] - Segunda \n [3] - Terça \n [4] - Quarta \n [5] - Quinta \n [6] - Sexta \n [7] - Sábado"));
+        
+        switch (dia) {
+            case 1:
+                console.log("Domingo");
+                break;
+            case 2:
+                console.log("Segunda");
+                break;
+            case 3:
+                console.log("Terça");
+                break;
+            case 4:
+                console.log("Quarta");
+                break;
+            case 5:
+                console.log("Quinta");
+                break;
+            case 6:
+                console.log("Sexta");
+                break;
+            case 7:
+                console.log("Sábado");
+                break;
+            default:
+                console.log("Dia não reconhecido");
+                break;
+        }
+    
+    </script>
+</body>
+</html>
