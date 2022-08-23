@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pessoa1 = {
+            nome: "Murilo Perosa",
+            cpf: "123.456.789-00",
+            altura: 2.00,
+            peso: 75,
+            genero: "M"
+        };
+
+        let pessoa2 = {
+            nome: "Eduardo Silva",
+            cpf: "654.321.987-00",
+            altura: 1.70,
+            peso: 50,
+            genero: "M"
+        };
+
+        function exibirPerfil (pessoa) {
+            document.write(`Nome: ${pessoa.nome}`);
+            document.write("<br>");
+            document.write(`CPF: ${pessoa.cpf}`);
+            document.write("<br>");
+            document.write(`Genero: ${pessoa.genero}`);
+            document.write("<br>");
+        }
+
+        exibirPerfil(pessoa1);
+        document.write("<hr>");
+        exibirPerfil(pessoa2);
+
+
+    </script>
+</body>
+</html>

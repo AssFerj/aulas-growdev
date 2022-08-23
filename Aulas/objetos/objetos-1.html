@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let computador = {
+            memoria : 8,
+            armazenamento : "1 Tb",
+            modelo : "Thinkpad",
+            processador: "Intel Cre i7"
+        };
+
+        // computador.memoria += 20;
+        console.log(computador.memoria, computador.modelo);
+        console.log(computador.armazenamento);
+
+        console.log(typeof computador);
+        console.log(typeof computador.memoria);
+        console.log(typeof computador.armazenamento);
+
+        console.log(computador['memoria']); // computador.memoria
+
+        let computador2 = {
+            memoria : 8,
+            armazenamento : {
+                modelo: '2022',
+                frequencia: '2ghz',
+                fabricante: {
+                    nome: 'XPG'
+                }
+            },
+            modelo : "Thinkpad"
+        };
+        
+        console.log(typeof computador2.armazenamento); // object
+        console.log(computador2.armazenamento.modelo);
+        console.log(computador2.armazenamento);
+        console.log(computador2.armazenamento.fabricante.nome);
+
+
+    </script>
+</body>
+</html>

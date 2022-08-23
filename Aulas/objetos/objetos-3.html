@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let carro1 = {
+            modelo: "Gol",
+            marca: "Volkswagem",
+            potencia: 200,
+            cor: "branca",
+            quantidade_portas: 4,
+            ar_condicionado: 5,
+        };
+
+        let carro2 = {
+            modelo: null,
+            marca: null,
+            potencia: null,
+            cor: null,
+            quantidade_portas: null,
+            ar_condicionado: null,
+        };
+        
+        console.log(carro2);
+
+        carro2.marca = prompt("Informe a marca: ");
+        carro2.modelo = prompt("Informe o modelo: ");
+        carro2.potencia = Number(prompt("Informe a potencia: "));
+        carro2.cor = prompt("Informe a cor: ");
+        carro2.quantidade_portas = Number(prompt("Informe a qtd de portas: "));
+        carro2.ar_condicionado = prompt("Tem ar condicionado?");
+
+        console.log(carro2);
+        console.log(carro2.cor);
+
+        carro2.cor = "Amarelo";
+        
+        console.log(carro2.cor);
+
+    </script>
+</body>
+</html>

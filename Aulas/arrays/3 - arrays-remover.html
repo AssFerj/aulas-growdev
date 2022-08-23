@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let frutas = ["Maçã", "Banana", "Uva", "Laranja"];
+
+        // Remove do Final
+        let itemRemovido = frutas.pop();
+        console.log(frutas);
+        console.log(itemRemovido);
+
+        // Remove do Início
+        let itemRemovido2 = frutas.shift();
+        console.log(frutas);
+        console.log(itemRemovido2);
+
+        // Removendo item específico
+        let position = frutas.indexOf('Uva');
+        frutas.splice(position, 1);
+        console.log(frutas);
+    </script>
+</body>
+</html>

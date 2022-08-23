@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = [
+        {
+            id: 1,
+            nome: "Roger",
+            idade: 40,
+        },
+        {
+            id: 2,
+            nome: "Marcelo",
+            idade: 25,
+        },
+        {
+            id: 3,
+            nome: "Manoel",
+            idade: 43,
+        },
+        {
+            id: 4,
+            nome: "Maria",
+            idade: 17,
+        },
+        {
+            id: 5,
+            nome: "Pedro",
+            idade: 18,
+        },
+        {
+            id: 6,
+            nome: "Eduardo",
+            idade: 52,
+        },
+        {
+            id: 7,
+            nome: "Cláudia",
+            idade: 41,
+        },
+        {
+            id: 8,
+            nome: "John",
+            idade: 39,
+        },
+        {
+            id: 9,
+            nome: "Jéssica",
+            idade: 19,
+        },
+        {
+            id: 10,
+            nome: "Rejane",
+            idade: 45,
+        },
+        {
+            id: 11,
+            nome: "Michele",
+            idade: 36,
+        },
+    ];
+        
+        /**
+         * map: percorre os itens do array aplicando os comportamentos definidos pela função 
+         * e retornando um novo array.
+         * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+         * */
+        
+        let arrayDeNomes = data.map(function (value) {
+            return value.nome;
+        });
+
+        let arrayDeIdade = data.map(function (value) {
+            return value.idade;
+        });
+
+        // anonimous function
+        let arrayDeNomeIdade = data.map(function (value) {
+            return {nome: value.nome, idade: value.idade};
+        });
+
+        // arrow function
+        let arrayDeNomeIdade2 = data.map((value) => {
+            let maiorDeIdade = value.idade >= 18;
+            return {
+                nome: value.nome, 
+                idade: value.idade,
+                maior_de_idade: maiorDeIdade
+            };
+        });
+
+        console.log(arrayDeNomes);
+        console.log(arrayDeIdade);
+        console.log(arrayDeNomeIdade);
+        console.log(arrayDeNomeIdade2);
+        console.log(data);
+    </script>
+</body>
+</html>

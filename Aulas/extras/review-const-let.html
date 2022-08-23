@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // taxa -> valor do sistema
+        // dinheiro -> input do user
+        
+        // valor de referencia para calculo
+        const taxa = 1.10;
+
+        let dinheiro = Number(prompt("Informe o valor em dinhero: "));
+
+        dinheiro *= taxa;
+        
+        document.write(`Seu dinheiro agora é: R$ ${dinheiro}`);
+        document.write("<br>");
+        document.write(`A taxa utilizada para o calculo foi de: ${taxa}`);
+
+    </script>
+</body>
+</html>

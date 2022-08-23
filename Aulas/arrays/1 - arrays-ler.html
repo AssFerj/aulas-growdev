@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let frutas = ["Maçã", "Banana", "Uva", "Laranja"];
+
+        console.log("frutas.length -> ", frutas.length); // 4
+
+        console.log("frutas[0] -> ", frutas[0]);
+        console.log("frutas[1] -> ", frutas[1]);
+        console.log("frutas[2] -> ", frutas[2]);
+        console.log("frutas[3] -> ", frutas[3]);
+
+        frutas[2] = "Kiwi";
+        console.log("frutas[2] -> ", frutas[2]);
+
+        console.log(frutas[0]); // acessando o priemrio
+        console.log(frutas[frutas.length - 1]); // acessando o último
+
+        // duplicar
+        let copia = frutas.slice();
+        console.log("copia", copia);
+    </script>
+</body>
+</html>
