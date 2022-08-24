@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 Atividade Prática - Funções e objetos</title>
+</head>
+<body>
+    <script>
+        /*Crie cinco objetos JavaScript dentro 
+        de um Array contendo nome(texto), 
+        idade(número), skills (array), ou seja 
+        um total de cinco alunos. Agora crie 
+        uma função que receba estes cinco 
+        objetos e mais um parâmetro skill. 
+        Dependendo da skill enviada mostrar no
+        console.log(), quais alunos têm a skill 
+        enviada por parâmetro, mostrar todo o 
+        objeto. Exemplo: Pedro, 24, [JavaScript, 
+        TypeScript, React]. Se mandar chamar a 
+        função enviando (alunos, “JavaScript”), 
+        precisa mostrar o Pedro e qual mais se 
+        encaixa nessa skill.*/
+        let alunos = [
+            {
+                nome: "Assis",
+                idade: 35,
+                skills: ["html", "css", "javascript"]
+            },{
+                nome: "Marcia",
+                idade: 22,
+                skills: ["html", "css", "bootstrap"]
+            },{
+                nome: "João",
+                idade: 28,
+                skills: ["css", "javascript", "react"]
+            },{
+                nome: "Ana",
+                idade: 30,
+                skills: ["node", "scss", "react"]
+            },{
+                nome: "Murilo",
+                idade: 20,
+                skills: ["html", "css", "javascript", "bootstrap", "react"]
+            }
+        ]
+        function mostrarAlunos(alunos, skill){
+            
+        }
+        mostrarAlunos(alunos, "javascript")
+
+        // function encontrarSkill(candidatos, skillDesejada){
+        //     const skillEncontrado = candidatos.filter((aluno) => {
+        //         return aluno.skills.some((skill) => {
+        //             return skill.toLowerCase() === skillDesejada.toLowerCase();
+        //         });
+        //     });
+        //     console.log(skillEncontrado)
+        // };
+
+        // encontrarSkill(candidatos, 'typeScript');
+    </script>
+</body>
+</html>
