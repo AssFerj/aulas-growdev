@@ -48,7 +48,7 @@
 
         function mostrarAlunos(alunos, skill){
             const retorno = alunos.filter((value)=>{
-                return value.skills.includes(skill)
+                return value.skills.includes(skill.toLowerCase())
             })
             console.log(retorno);
         }
