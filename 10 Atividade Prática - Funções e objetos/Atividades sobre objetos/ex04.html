@@ -45,10 +45,39 @@
                 skills: ["html", "css", "javascript", "bootstrap", "react"]
             }
         ]
+
         function mostrarAlunos(alunos, skill){
-            
+            const retorno = alunos.filter((value)=>{
+                return value.skills.includes(skill)
+            })
+            console.log(retorno);
         }
-        mostrarAlunos(alunos, "javascript")
+        mostrarAlunos(alunos, "bootstrap")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // function encontrarSkill(candidatos, skillDesejada){
         //     const skillEncontrado = candidatos.filter((aluno) => {
