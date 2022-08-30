@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 Atividade Prática - Manipulação do DOM</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; flex-flow: column;">
+    <h1>Contador de cliques</h1>
+    <button id="increment">INCREMENTAR</button>
+    <button id="zerarCount" style="margin-top: 1rem;">ZERAR CONTADOR</button>
+    <p id="paragrafo">O contador está com <span id="disp">0</span> cliques</p>
+    <script>
+        let contador = 0;
+        const increment = document.getElementById("increment");
+        const parag = document.getElementById('paragrafo');
+        
+        increment.onclick = ()=> {
+            const disp = document.getElementById("disp");
+            if(parag.innerHTML == ""){
+                parag.innerHTML = "O contador está com <span id='disp'>0</span> cliques"
+            }
+            contador++;
+            disp.innerHTML = contador;
+        }
+        zerarCount.onclick = ()=> {
+            parag.innerHTML = ""
+            contador = 0
+        }
+    </script>
+</body>
+</html>
