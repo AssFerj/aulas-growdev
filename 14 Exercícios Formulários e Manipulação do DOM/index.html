@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Formulários e Manipulação do DOM</title>
+</head>
+<body>
+    <form id="form">
+        <h1>Formulário</h1>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="ipt-nome" required>
+            <br/>
+            <label for="endereco">Endereço: </label>
+            <input type="text" name="endereco" id="ipt-endereco" required>
+            <br/>
+            <label for="cidade">Cidade: </label>
+            <input type="text" name="cidade" id="ipt-cidade" required>
+            <br/>
+            <label for="estado">Estado: </label>
+            <select name="estado" id="ipt-estado" required> 
+                <option value="desabled" desabled selected>Escolha uma opção</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Profisionais</legend>
+            <label for="">Natureza do Cargo: </label>
+            <br/>
+            <input type="radio" name="cargo" value="gerencia" id="ipt-gerencia" checked>
+            <label for="gerencia">Gerencia</label>
+            <input type="radio" name="cargo" value="financeiro" id="ipt-financeiro">
+            <label for="financeiro">Financeiro</label>
+            <input type="radio" name="cargo" value="recepcao" id="ipt-recepcao">
+            <label for="recepcao">Recepção</label>
+            <input type="radio" name="cargo" value="administrativo" id="ipt-administrativo">
+            <label for="administrativo">Administrativo</label>
+            <input type="radio" name="cargo" value="juridico" id="ipt-juridico">
+            <label for="juridico">Jurídico</label>
+            <br/><br/>
+            <label for="">Área de Interesse</label>
+            <br/>
+            <input type="checkbox" name="area" value="computacao">
+            <label for="">Computação</label>
+            <input type="checkbox" name="area" value="biologia">
+            <label for="">Biologia</label>
+            <input type="checkbox" name="area" value="meio ambiente">
+            <label for="">Meio Ambiente</label>
+            <input type="checkbox" name="area" value="engenharia">
+            <label for="">Engenharia</label>
+            <input type="checkbox" name="area" value="historico">
+            <label for="">Histório</label>
+            <br/><br/>
+            <label for="curriculo">Mini-currículo: </label>
+            <textarea name="curriculo" cols="30" rows="10" id="textarea"></textarea>
+        </fieldset>
+        <br/>
+        <button type="submit" id="enviar-dados">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+    <script>
+        document.getElementById('enviar-dados').addEventListener('click', function(e){
+            e.preventDefault()
+            submit();
+        });
+        
+        function submit(){
+            const nome = document.getElementById('ipt-nome');
+            const endereco = document.getElementById('ipt-endereco');
+            const cidade = document.getElementById('ipt-cidade');
+            const estado = document.getElementById('ipt-estado');
+            const curriculo = document.getElementById('textarea');
+            
+            const data = {
+                nome: null,
+                endereco: null,
+                cidade: null,
+                estado: null,
+                cargo: null,
+                area: null,
+                curriculo: null
+            }
+            
+            const cargo = document.querySelector('input[name="cargo"]:checked');
+
+            const area = document.querySelectorAll('input[name="area"]:checked');
+            const interessesMarcados = [];
+            area.forEach((elemento) => interessesMarcados.push(elemento.value));
+            
+
+            if(nome.value == "" || 
+                nome.value == null || 
+                endereco.value == "" || 
+                endereco.value == null || 
+                cidade.value == "" || 
+                cidade.value == null || 
+                estado.value == "" || 
+                estado.value == null){
+                alert("Por favor preencha os campos!")
+                return;
+            }
+            if(area.length === 0){
+                alert("Deve ser selecionado ao menos uma área de interesse.")
+                return;
+            }
+
+            data.nome = nome.value;
+            data.endereco = endereco.value;
+            data.cidade = cidade.value;
+            data.estado = estado.value;
+            data.cargo = cargo.value;
+            data.area = interessesMarcados;
+            data.curriculo = curriculo.value;
+
+            console.log(` - Dados Pessoais\nNome: ${data.nome}\nEndereço: ${data.endereco}\nCidade: ${data.cidade}\nEstado: ${data.estado}\n - Dados Profisionais\nNatureza do cargo: ${data.cargo}\nÁrea de Interesse: ${data.area}\nCurrículo: ${data.curriculo}`)
+        }
+        
+    </script>
+</body>
+</html>
