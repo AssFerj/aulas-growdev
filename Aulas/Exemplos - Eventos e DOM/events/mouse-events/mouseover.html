@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            background-color: blue;
+        }
+
+        li {
+            background-color: green;
+            margin: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <li>Maçã</li>
+        <li>Uva</li>
+        <li>Laranja</li>
+        <li>Manga</li>
+        <li>Mamão</li>
+    </ul>
+
+    <script>
+        // mouseover - O evento mouseover é acionado quando um dispositivo ponteiro
+        // é movido para o elemento que esteja escutando ou para um de seus filhos.
+       
+        // https://developer.mozilla.org/pt-BR/docs/Web/API/Element/mouseover_event
+
+        const list = document.getElementById('myList');
+        list.addEventListener('mouseover', () => {
+            console.log('Ocorreu o evento de mouseover.');
+        });
+    </script>
+</body>
+</html>

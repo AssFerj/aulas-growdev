@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // save data on session storage
+        sessionStorage.setItem('chave-1', 'valor-1');
+        sessionStorage.setItem('chave-2', 'valor-2');
+        sessionStorage.setItem('chave-3', 'valor-3');
+        
+        // update data on session storage
+        sessionStorage.setItem('chave-1', 'valor-1-atualizado');
+
+        // get data from session storage
+        const chave1 = sessionStorage.getItem('chave-1');
+        console.log('Valor da chave-1 -> ', chave1);
+
+        // remove data from session storage
+        sessionStorage.removeItem('chave-3');
+
+        // clear all data of session storage
+        // sessionStorage.clear();
+
+    </script>
+</body>
+</html>

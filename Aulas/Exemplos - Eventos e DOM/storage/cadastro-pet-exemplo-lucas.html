@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pets</title>
+</head>
+<body>
+    <h3>Cadastre seu Pet</h3>
+    <form id="petForm">
+        <label for="iptPetName">Nome:</label><br>
+        <input type="text" name="iptPetName" id="iptPetName" placeholder="Informe o nome do seu pet." required>
+        <br/><br/>
+        <label for="selectPetType">Tipo:</label><br/>
+        <select id="selectPetType" required>
+            <option disabled value="" selected>Selecione o tipo do seu pet.</option>
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+            <option value="outro">Outro</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Salvar"/>
+    </form>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    <script>
+        let petsList = JSON.parse(localStorage.getItem('pets-list'));
+
+        if (!petsList) {
+            petsList = [];
+        }
+
+        const form      = document.getElementById('petForm');
+        const iptName   = document.getElementById('iptPetName');
+        const slctType  = document.getElementById('selectPetType');
+        const tableBody = document.getElementById('tableBody');
+
+        window.addEventListener('load', () => {
+            for (let i = 0; i < petsList.length; i++) {
+                const petRow = createTableElement(petsList[i]);
+                tableBody.appendChild(petRow);
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const newPet = {
+                id: Math.floor(Date.now() / 1000),
+                name: iptName.value,
+                type: slctType.value, 
+                vacines: []
+            };
+
+            petsList.push(newPet);
+            localStorage.setItem('pets-list', JSON.stringify(petsList));
+
+            const petRow = createTableElement(newPet);
+            tableBody.appendChild(petRow);
+
+            iptName.value  = '';
+            slctType.value = '';
+        });
+
+        function createTableElement (pet) {
+            const row = document.createElement('tr');
+
+            const tdName = document.createElement('td');
+            tdName.innerText = pet.name;
+            row.appendChild(tdName);
+
+            const tdType = document.createElement('td');
+            tdType.innerText = pet.type;
+            row.appendChild(tdType);
+
+            const tdAction = document.createElement('td');
+
+            const deleteButton = document.createElement('button');
+            deleteButton.innerText = 'Delete';
+            deleteButton.setAttribute('pet-id', pet.id);
+            deleteButton.addEventListener('click', deletePet);
+
+            const vacineButton = document.createElement('button');
+            vacineButton.innerText = 'Add Vacine';
+            vacineButton.setAttribute('pet-id', pet.id);
+            vacineButton.addEventListener('click', addVacine);
+
+            tdAction.appendChild(deleteButton);
+            tdAction.appendChild(vacineButton);
+
+            row.appendChild(tdAction);
+
+            return row;
+        }
+
+        function deletePet(evt) {
+            const petID = evt.target.getAttribute('pet-id');
+            
+            petsList = petsList.filter((pet)=> {
+                return pet.id != petID;
+            });
+
+            localStorage.setItem('pets-list', JSON.stringify(petsList));
+
+            tableBody.removeChild(evt.target.parentNode.parentNode);
+        }
+        
+        function addVacine (evt) {
+            let dataVacina = prompt('Informe a data da vacina.');
+            const petID = evt.target.getAttribute('pet-id');
+
+            for (let i = 0; i < petsList.length; i++) {
+                if (petsList[i].id == petID) {
+                    petsList[i].vacines.push(dataVacina);
+                }
+            }
+
+            localStorage.setItem('pets-list', JSON.stringify(petsList));
+        }
+    
+    </script>
+</body>
+</html>

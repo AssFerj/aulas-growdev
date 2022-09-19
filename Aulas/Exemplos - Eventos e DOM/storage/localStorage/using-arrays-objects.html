@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const frutas = ['uva', 'maçã', 'banana', 'laranja'];
+        localStorage.setItem('keyFrutas', JSON.stringify(frutas));
+
+        const frutasSaved =  JSON.parse(localStorage.getItem('keyFrutas'));
+        console.log(frutasSaved, typeof frutasSaved);
+
+        const carro = {
+            name: 'uno',
+            marca: 'fiet',
+            year: 2020
+        };
+
+        localStorage.setItem('keyCarro', JSON.stringify(carro));
+
+        const carroSaved = JSON.parse(localStorage.getItem('keyCarro'));
+        console.log(carroSaved, typeof carroSaved);
+
+        const pessoas = [
+            {
+                name: 'Murilo',
+                age: 24,
+            },
+            {
+                name: 'Rafaela',
+                age: 20,
+            },
+            {
+                name: 'Bernardo',
+                age: 18,
+            }
+        ];
+
+        localStorage.setItem('keyPessoas', JSON.stringify(pessoas));
+        const pessoasSaved = JSON.parse(localStorage.getItem('keyPessoas'));
+        console.log(pessoasSaved, typeof pessoasSaved);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // save data on local storage
+        localStorage.setItem('chave-1', 'valor-1');
+        localStorage.setItem('chave-2', 'valor-2');
+        localStorage.setItem('chave-3', 'valor-3');
+
+        // update data on local storage
+        localStorage.setItem('chave-1', 'valor-1-atualizado');
+
+        // get data from local storage
+        const chave1 = localStorage.getItem('chave-1');
+        console.log('Valor da chave-1 -> ', chave1);
+
+        // remove data from local storage
+        localStorage.removeItem('chave-3');
+
+        // clear all data of local storage
+        localStorage.clear();
+
+    </script>
+</body>
+</html>

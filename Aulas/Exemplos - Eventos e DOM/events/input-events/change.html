@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Pet List</h3>
+    <form>
+        <label for="iptPetName">Informe o nome do seu Pet:</label><br/>
+        <input type="text" id="iptPetName"> <br/><br/>
+       
+        <label for="selectPetType">Informe o tipo do seu Pet:</label><br/>
+        <select id="selectPetType">
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+        </select>
+    </form>
+
+    <script>
+        // change - The change event is fired for <input>, <select>, and <textarea> elements when the user modifies the element's value. 
+        // Unlike the input event, the change event is not necessarily fired for each alteration to an element's value.
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+
+        const input = document.getElementById('iptPetName');
+        input.addEventListener('change', (evt) => {
+            const newValue = evt.target.value;
+            console.log('O novo valor do input é: ' + newValue);
+        });
+
+        const select = document.getElementById('selectPetType');
+        select.addEventListener('change', (evt) => {
+            const newValue = evt.target.value;
+            console.log('O novo valor do select é: ' + newValue);
+        });
+    </script>
+</body>
+</html>

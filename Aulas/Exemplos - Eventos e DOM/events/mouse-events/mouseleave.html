@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            background-color: blue;
+        }
+
+        li {
+            background-color: green;
+            margin: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul id="myList">
+        <li>Maçã</li>
+        <li>Uva</li>
+        <li>Laranja</li>
+        <li>Manga</li>
+        <li>Mamão</li>
+    </ul>
+
+    <script>
+
+        // mouseleave - The mouseleave event is fired at an Element when the cursor of a pointing 
+        // device (usually a mouse) is moved out of it.
+
+        // mouseleave and mouseout are similar but differ in that mouseleave does not bubble and mouseout does. 
+        // This means that mouseleave is fired when the pointer has exited the element and all of its descendants, 
+        // whereas mouseout is fired when the pointer leaves the element or leaves one of the element's descendants 
+        // (even if the pointer is still within the element).
+
+        const list = document.getElementById('myList');
+        list.addEventListener('mouseleave', () => {
+            console.log('Ocorreu o evento de mouseleave.');
+        });
+    </script>
+</body>
+</html>

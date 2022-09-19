@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnClickMe">Click Me!</button>
+    <script>
+        const button = document.getElementById('btnClickMe');
+        button.addEventListener('click', () => {
+            alert('Clicou aqui');
+        });
+
+        button.addEventListener('click', exibeAlerta);
+
+        function exibeAlerta () {
+            alert('alerta da função');
+        }
+    </script>
+</body>
+</html>

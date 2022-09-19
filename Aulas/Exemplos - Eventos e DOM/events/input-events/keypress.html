@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Pet List</h3>
+    <form>
+        <label for="iptPetName">Informe o nome do seu Pet:</label><br/>
+        <input type="text" id="iptPetName"> <br/><br/>
+    </form>
+
+    <script>
+        // keypress - O evento keypress é disparado quando uma tecla que produz um valor do tipo caractere é pressionada.
+        // Exemplos de chaves que produzem um valor de caractere são chaves alfabéticas, numéricas e de pontuação. 
+        // Exemplos de chaves que não produzem um valor de caractere são as teclas modificadoras,
+        // como Alt, Shift, Ctrl, ou Meta.
+        // https://developer.mozilla.org/pt-BR/docs/Web/API/Element/keypress_event
+    
+        const input = document.getElementById('iptPetName');
+        input.addEventListener('keypress', (evt) => {
+            const value = evt.target.value;
+            console.log('Uma tecla foi clicada sobre o input.', value);
+            console.log(evt.key)
+        });
+    </script>
+</body>
+</html>
