@@ -1,0 +1,23 @@
+main{
+    background-color: aliceblue;
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    border: 2px solid #3d3d3d;
+}
+.r{
+    background-color: red;
+}
+.b{
+    background-color: blue;
+}

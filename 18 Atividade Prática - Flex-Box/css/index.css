@@ -1,0 +1,36 @@
+body{
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightgoldenrodyellow;
+    height: 50%;
+    width: 30%;
+}
+.quadrado{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+    margin: 10px;
+    padding: .5rem;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.b{
+    background-color: blue;
+    color: aliceblue;
+}
+.r{
+    background-color: red;
+    color: aliceblue;
+}
+.self-end{
+    align-self: flex-end;
+}
+.self-start{
+    align-self: flex-start;
+}
