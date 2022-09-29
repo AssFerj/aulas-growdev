@@ -19,7 +19,8 @@ main{
     flex-direction: row;
 }
 .icon{
-    font-size: calc(14px + (65 - 14) * ((100vw - 300px) / (1600 - 300)));
+    margin-top: -8px;
+    font-size: 30px;
 }
 h1{
     font-size: 35px;
