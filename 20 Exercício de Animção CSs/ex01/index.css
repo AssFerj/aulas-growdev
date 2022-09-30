@@ -1,0 +1,17 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    animation: exemple 3s infinite;
+}
+
+@keyframes exemple {
+    0%{left: 0%;}
+    100%{left: 86%;}
+}
