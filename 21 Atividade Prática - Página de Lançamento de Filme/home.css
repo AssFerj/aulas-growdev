@@ -41,7 +41,13 @@ body{
     align-items: center;
 }
 .marvel{
-    width: 200px;
+    width: 30%;
+    animation: data 3s normal;
+    position: absolute;
+    top: -30%;
+}
+.fade-logo{
+    animation: fade 3s 1s normal;
 }
 
 .lancamento{
@@ -51,7 +57,16 @@ body{
     text-decoration: underline;
     white-space: nowrap;
     overflow: hidden;
-    animation: data 3s steps(11) 1s normal;
+    animation: data 3s steps(11) normal;
+}
+
+@keyframes fade {
+    form{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 @keyframes data {
@@ -59,7 +74,7 @@ body{
         width: 0;
     }
     to{
-        width: 27%;
+        width: 30%;
     }
 }
 

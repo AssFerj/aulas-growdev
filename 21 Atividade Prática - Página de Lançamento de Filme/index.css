@@ -66,13 +66,27 @@ a .iron-fly{
 .heart{
     width: 14%;
     height: 29%;
-    animation: rotate .5s linear infinite;
+    animation: rotate .4s linear infinite;
     border: 2px dashed #49ecf5;
     border-radius: 50%;
 }
+.black-iron{
+    width: 10%;
+    position: absolute;
+    right: 30%;
+    top: 10%;
+    animation: black-flying 5s normal ease;
+}
+.hulkbuster{
+    width: 25%;
+    position: absolute;
+    left: 5%; 
+    bottom: 5%;
+    animation: hulkbuster 1.5s normal;
+}
 .opaco{
     opacity: 0;
-    animation: opaco 3s infinite ease;
+    animation: opaco 2.5s infinite ease-in-out;
    }
 
 footer{
@@ -101,19 +115,25 @@ footer{
 
    @keyframes opaco {
     0%{
-        opacity: 0.2;
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.3;
     }
     25%{
-        opacity: 0.4;
+        opacity: 0.7;
     }
     50%{
-        opacity:0.6;
+        opacity:1;
     }
     75%{
-        opacity: 0.8;
+        opacity: 0.5;
+    }
+    90%{
+        opacity: 0.3;
     }
     100%{
-        opacity: 1;
+        opacity: 0;
     }
    }
 
@@ -186,3 +206,24 @@ footer{
     }
 }
 
+@keyframes black-flying{
+    0%{
+        top: 0%;
+        right: -20%;
+    }
+    50%{
+        top: 30%;
+        right: 30%
+    }
+}
+
+@keyframes hulkbuster {
+    0%{
+        /* opacity: 0; */
+        bottom: 100%;
+    }
+    100%{
+        /* opacity: 1; */
+        bottom: 5%;
+    }
+}
