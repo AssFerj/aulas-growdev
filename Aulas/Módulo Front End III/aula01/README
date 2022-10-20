@@ -1,0 +1,5 @@
+## Iniciar um projeto TypeScript
+
+1 - npm init -y
+2 - npm install typescript -D
+3 - npx tsc --init
